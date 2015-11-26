@@ -17,7 +17,7 @@ public class Xogo {
                 respuesta = true;
                 break;
             }
-            int res = Integer.parseInt(JOptionPane.showInputDialog("Introduce numero"));
+            int res =(introducir("Introduce numero"));
             if (res < num) {
                 imprimir("Es mayor",0);
                 imprimir("Es mayor",1);
@@ -42,5 +42,9 @@ public void imprimir(String cadenaAImprimir,int opcion){
             
     }
 }
+public int introducir(String pregunta){
+ int dato=Integer.parseInt(JOptionPane.showInputDialog(pregunta));
 
+return dato;
+}
 }
